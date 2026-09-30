@@ -18,9 +18,11 @@ if [ -e "$out" ] && [ "${1:-}" != "-f" ]; then
 fi
 
 {
-    echo "# $(basename "$PWD")"
+    echo "# Preview:"
     echo
     for img in "${images[@]}"; do
+        echo "\`$img\`"
+        echo
         echo "<img src=\"${img// /%20}\" alt=\"${img%.*}\" width=\"$width\">"
         echo
     done
