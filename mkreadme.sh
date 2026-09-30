@@ -23,7 +23,9 @@ fi
     for img in "${images[@]}"; do
         echo "\`$img\`"
         echo
+        echo "<p align='center'>"
         echo "<img src=\"${img// /%20}\" alt=\"${img%.*}\" width=\"$width\">"
+        echo "</p>"
         echo
     done
 } > "$out"
